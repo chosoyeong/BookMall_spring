@@ -2,125 +2,138 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/member/join.css">
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-</head>
-<body>
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
+		
+		<link rel="stylesheet" href="/resources/css/member/join.css">
+	
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.js"
+		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		  crossorigin="anonymous"></script>
+	</head>
 
-<div class="wrapper">
-	<form id="join_form" method="post">
-	<div class="wrap">
-			<div class="subjecet">
-				<span>회원가입</span>
-			</div>
-			
-			
-			<div class="id_wrap">
-				<div class="id_name">아이디</div>
-				<div class="id_input_box">
-					<input class="id_input" name = "member_id">
-				</div>
-			</div>
-			<div class="pw_wrap">
-				<div class="pw_name">비밀번호</div>
-				<div class="pw_input_box">
-					<input class="pw_input" name="pw">
-				</div>
-			</div>
-			<div class="pwck_wrap">
-				<div class="pwck_name">비밀번호 확인</div>
-				<div class="pwck_input_box">
-					<input class="pwck_input">
-				</div>
-			</div>
+	<body>
 
-			<div class="user_wrap">
-				<div class="user_name">이름</div>
-				<div class="user_input_box">
-					<input class="user_input" name="name">
-				</div>
-			</div>
-			<div class="gender_wrap">
-				<div class="gender_name">성별</div>
-				<div class="gender_input_box">
-					<input class="gender_input" name="gender">
-				</div>
-			</div>
-			<div class="mail_wrap">
-				<div class="mail_name">이메일</div> 
-				<div class="mail_input_box">
-					<input class="mail_input" name="email">
-				</div>
-				<div class="mail_check_wrap">
-					<div class="mail_check_input_box">
-						<input class="mail_check_input">
+		<div class="wrapper">
+			<div class="inner">
+				<form id="join_form" method="post">
+					<h3>Registration Form</h3>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">이름:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-account-o"></i>
+								<input type="text" class="form-control" name="name">
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">이메일:</label>
+							<div class="form-holder">
+								<i style="font-style: normal; font-size: 15px;">@</i>
+								<input type="text" class="form-control" name="email">
+							</div>
+						</div>
 					</div>
-					<div class="mail_check_button">
-						<span>인증번호 전송</span>
+					
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">아이디:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-account-o"></i>
+								<input type="text" class="form-control" name="member_id">
+							</div>
+						</div>
 					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			<div class="phone_wrap">
-				<div class="phone_name">휴대폰 번호</div>
-				<div class="phone_input_box">
-					<input class="phone_input" name="phone">
-				</div>
-			</div>
-			<div class="birth_wrap">
-				<div class="birth_name">생년월일</div>
-				<div class="birth_input_box">
-					<input class="birth_input" name="birth">
-				</div>
-			</div>
-			<div class="address_wrap">
-				<div class="address_name">주소</div>
-				<div class="address_input_1_wrap">
-					<div class="address_input_1_box">
-						<input class="address_input_1" name="addr">
+					
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">비밀번호:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-lock-outline"></i>
+								<input type="password" class="form-control" placeholder="********" name="pw">
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">비밀번호 확인:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-lock-outline"></i>
+								<input type="password" class="form-control" placeholder="********">
+							</div>
+						</div>
 					</div>
-					<div class="address_button">
-						<span>주소 찾기</span>
+					
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">휴대폰 번호:</label>
+							<div class="form-holder">
+								<i class="zmdi zmdi-account-o"></i>
+								<input type="text" class="form-control" name="phone">
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">생년월일:</label>
+							<div class="form-holder">
+								<i style="font-style: normal; font-size: 15px;"></i>
+								<input type="text" class="form-control" name="birth">
+							</div>
+						</div>
 					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class ="address_input_2_wrap">
-					<div class="address_input_2_box">
-						<input class="address_input_2">
+					
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">주소:</label>
+							<div class="form-holder">
+								<i style="font-style: normal; font-size: 15px;">@</i>
+								<input type="text" class="form-control" name="addr">
+							</div>
+						</div>
+						<div class="form-wrapper">
+							<label for="">성별:</label>
+							<div class="form-holder select">
+								<select name="gender" id="" class="form-control">
+									<option value="m">남</option>
+									<option value="f">여</option>
+								</select>
+								<i class="zmdi zmdi-face"></i>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class ="address_input_3_wrap">
-					<div class="address_input_3_box">
-						<input class="address_input_3">
+					<div class="form-end">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> 약관동의 넣을지,,,?
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="button-holder">
+							<button>가입하기</button>
+						</div>
+						
 					</div>
-				</div>
-			</div>
-			
-			
-			<div class="join_button_wrap">
-				<input type="button" class="join_button" value="가입하기">
+				</form>
 			</div>
 		</div>
-	</form>
-</div>
+		
+		<script>
 
-<script>
-
-$(document).ready(function(){
-	//회원가입 버튼(회원가입 기능 작동)
-	$(".join_button").click(function(){
-		$("#join_form").attr("action", "/member/join");
-		$("#join_form").submit();
-	});
-});
-
-</script>
-</body>
+		$(document).ready(function(){
+			//회원가입 버튼(회원가입 기능 작동)
+			$(".join_button").click(function(){
+				$("#join_form").attr("action", "/member/join");
+				$("#join_form").submit();
+			});
+		});
+		
+		</script>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
