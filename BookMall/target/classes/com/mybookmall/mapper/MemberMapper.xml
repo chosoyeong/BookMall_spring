@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.mybookmall.mapper.MemberMapper">
+	
+	<insert id = "memberJoin">
+		insert into member values(#{member_id}, #{email}, #{pw}, #{name}, #{phone}, #{gender}, #{birth}, now(), 0, "general", #{addr}, 0);
+	</insert>
+
+</mapper>
