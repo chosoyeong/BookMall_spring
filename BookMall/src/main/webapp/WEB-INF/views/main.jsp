@@ -10,7 +10,7 @@
 <body>
 
 <!-- todo: 아랫부분은 추후 bootstrap 활용하여 수정 -->
-<div class="wrapper">
+<!-- <div class="wrapper">
 	<div class="wrap">
 		<div class="top_gnb_area">
 			<h1>gnb area</h1>
@@ -36,8 +36,15 @@
 		</div>
 				
 	</div>
-</div>
+</div> -->
 
+ <div class="wrapper">
+	<div class="wrap">
+			<div class="login_area">
+				<div class="login_button"><a href="/member/login">로그인</a></div>
+			</div>
+	</div>
+</div>
 
 
 

@@ -7,5 +7,11 @@
 	<insert id = "memberJoin">
 		insert into member values(#{member_id}, #{email}, #{pw}, #{name}, #{phone}, #{gender}, #{birth}, now(), 0, "general", #{addr}, 0);
 	</insert>
-
+	
+	<!-- 아이디 중복검사 -->
+  	<select id="idCheck" resultType="int">
+  	
+  		select count(*) from member where member_id = #{member_id}
+  	
+  	</select>
 </mapper>

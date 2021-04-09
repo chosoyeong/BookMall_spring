@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +28,9 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/util.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 <!--===============================================================================================-->
+
+	
+	
 </head>
 <body>
 	
@@ -55,7 +59,7 @@
 					<div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 						<label class="label-checkbox100" for="ckb1">
-							Remember me
+							아이디 저장
 						</label>
 					</div>
 
@@ -64,10 +68,16 @@
 							Login
 						</button>
 					</div>
+					
+					<div class="text-center p-t-50">
+						<a class="txt1" href="/member/join">
+							sign up
+						</a>
+					</div>
 
-					<div class="text-center p-t-90">
+					<div class="text-center p-t-50">
 						<a class="txt1" href="#">
-							Forgot Password?
+							Forgot password?
 						</a>
 					</div>
 				</form>
