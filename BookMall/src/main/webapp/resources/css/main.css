@@ -5,7 +5,7 @@
 }
 /* 화면 전체 렙 */
 .wrapper{
-	width: 1900px;
+	width: 100%;
 }
 /* content 랩 */
 .wrap{
@@ -353,6 +353,12 @@ iframe {
   border-bottom: 2px solid rgba(255,255,255,0.24);
   margin-bottom: 30px;
 }
+.wrap-input100_pw {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  margin-bottom: 30px;
+}
 
 .input100 {
   font-family: Poppins-Regular;
@@ -366,6 +372,20 @@ iframe {
   background: transparent;
   padding: 0 5px 0 38px;
 }
+
+.input100_pw {
+  font-family: Poppins-Regular;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px 0 38px;
+}
+
 
 /*---------------------------------------------*/ 
 .focus-input100 {
@@ -414,6 +434,52 @@ iframe {
   transition: all 0.4s;
 }
 
+.focus-input100_pw {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100_pw::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #fff;
+}
+
+.focus-input100_pw::after {
+  font-family: Material-Design-Iconic-Font;
+  font-size: 22px;
+  color: #fff;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .input100:focus {
   padding-left: 5px;
 }
@@ -424,6 +490,19 @@ iframe {
 }
 
 .input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.input100_pw:focus {
+  padding-left: 5px;
+}
+
+.input100_pw:focus + .focus-input100_pw::after {
+  top: -22px;
+  font-size: 18px;
+}
+
+.input100_pw:focus + .focus-input100_pw::before {
   width: 100%;
 }
 
@@ -440,6 +519,19 @@ iframe {
   padding-left: 5px;
 }
 
+
+.has-val.input100_pw + .focus-input100_pw::after {
+  top: -22px;
+  font-size: 18px;
+}
+
+.has-val.input100_pw + .focus-input100_pw::before {
+  width: 100%;
+}
+
+.has-val.input100_pw {
+  padding-left: 5px;
+}
 
 /*==================================================================
 [ Restyle Checkbox ]*/
@@ -650,11 +742,27 @@ iframe {
   }
 }
 
+ 
+/* 로그인 실패시 경고글 */
+.login_warn{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    color : #ff0080;
+}
 
-
-
-
-
+/* 로그인 성공 영역 */
+.login_success_area{
+    height: 70%;
+    width: 30%;
+    border: 5px solid #7474ad;
+    border-radius: 50px;
+    margin: 5% auto;
+}
+.login_success_area>span{
+    display : block;
+    text-align: center;
+}
 
 
 

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,9 +42,24 @@
 
  <div class="wrapper">
 	<div class="wrap">
-			<div class="login_area">
-				<div class="login_button"><a href="/member/login">로그인</a></div>
-			</div>
+	
+	
+			 <!-- 로그인 하지 않은 상태 -->
+             <c:if test = "${member == null }">
+                 <div class="login_button"><a href="/member/login">로그인</a></div>
+             </c:if>  
+             
+			 <!-- 로그인 한 상태 -->
+	 		 <c:if test="${ member != null }">
+           		<div class="login_success_area">
+                    <span>회원 : ${member.name}</span>
+                    <span>포인트 : <fmt:formatNumber value="${member.point }" pattern="#,###" /> </span>
+				</div>
+             </c:if>
+	
+			
+			
+			
 	</div>
 </div>
 
