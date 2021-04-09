@@ -54,6 +54,7 @@
            		<div class="login_success_area">
                     <span>회원 : ${member.name}</span>
                     <span>포인트 : <fmt:formatNumber value="${member.point }" pattern="#,###" /> </span>
+					<a href="/member/logout.do">로그아웃</a>
 				</div>
              </c:if>
 	
