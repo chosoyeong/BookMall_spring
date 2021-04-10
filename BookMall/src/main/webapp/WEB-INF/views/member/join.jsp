@@ -98,7 +98,7 @@
 								<input type="DATE" class="form-control" name="birth">
 							</div>
 						</div>
-					</div>
+					</div> //
 					
 					<div class="form-group">
 						<div class="form-wrapper">
