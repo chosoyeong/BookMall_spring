@@ -95,7 +95,7 @@
 							<label for="">생년월일:</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;"></i>
-								<input type="text" class="form-control" name="birth">
+								<input type="DATE" class="form-control" name="birth">
 							</div>
 						</div>
 					</div>
