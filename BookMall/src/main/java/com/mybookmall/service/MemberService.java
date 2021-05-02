@@ -11,4 +11,11 @@ public interface MemberService {
 	 
     /* 로그인 */
     public MemberVO memberLogin(MemberVO member) throws Exception;
+    
+	//구글회원가입
+	public void joinMemberByGoogle(MemberVO vo) throws Exception;
+	
+	//구글로그인
+	public MemberVO loginMemberByGoogle(MemberVO vo) throws Exception;
+    
 }

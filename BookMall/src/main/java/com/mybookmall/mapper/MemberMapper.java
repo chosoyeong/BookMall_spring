@@ -11,4 +11,10 @@ public interface MemberMapper {
 
     /* 로그인 */
     public MemberVO memberLogin(MemberVO member);
+
+	public void joinMemberByGoogle(MemberVO member);
+	
+	public MemberVO loginMemberByGoogle(MemberVO member);
+
+
 }

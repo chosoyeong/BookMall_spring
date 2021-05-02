@@ -10,9 +10,18 @@
 	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 	  crossorigin="anonymous">
 	</script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>	
+	
+	<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.2.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	<meta name = "google-sign-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+ -->
+	<meta name = "google-signin-client_id"content = "796506631090-fdtdb9df5rfu7pgod93f431muocdg5g3.apps.googleusercontent.com">
+ 
+
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -41,7 +50,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('/resources/images/bg-01.jpg');">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" id="login_form" method="post">
 					<span class="login100-form-logo">
@@ -79,8 +88,8 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
-					</div>
-					
+					</div>				
+										
 					<div class="text-center p-t-50">
 						<a class="txt1" href="/member/join">
 							sign up
@@ -92,7 +101,18 @@
 							Forgot password?
 						</a>
 					</div>
+										
 				</form>
+	
+
+
+	
+	<fieldset>
+		<div id="googleLoginBtn" style="cursor: pointer">
+			<img width="230" id="googleLoginImg" src="${pageContext.request.contextPath}/resources/images/btn_google_signin_dark_normal_web@2x.png">
+		</div>
+	</fieldset>
+				
 			</div>
 		</div>
 	</div>
@@ -123,8 +143,7 @@
 <!--===============================================================================================-->
 	<script src="<c:url value="/resources/js/main.js" />"> </script>
 	
-<script>
- 
+	<script>
     /* 로그인 버튼 클릭 메서드 */
     $(".login100-form-btn").click(function(){
         
@@ -132,9 +151,12 @@
         $("#login_form").attr("action", "/member/login");
         $("#login_form").submit();
  
-    });
- 
-</script>
- 
+    });    
+    </script> 
+    
+    
+      
 </body>
+
+
 </html>
